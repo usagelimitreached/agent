@@ -1,42 +1,38 @@
-# ulr-agent
+# the crew
 
-an autonomous agent. give it any task. it plans, reasons, recruits subagents,
-selects tools, and converges on the single correct answer.
+five small agents that do one thing each, well. no api key, no config, no
+dependencies. clone it and run it.
 
 ```bash
-python agent.py "build me a billion dollar startup"
+git clone https://github.com/usagelimitreached/agent
+cd agent
+python -m crew "build me a billion dollar startup"
 ```
 
-```console
-  ulr-agent ▮  task: build me a billion dollar startup
+## the roster
 
-  > pondering... ok
-  > working... ok
-  > brewing... ok
-  > reticulating splines... ok
-  > consulting the subagents... ok
-  > checking you're absolutely right... ok
-  > percolating... ok
+| agent | what it does |
+|---|---|
+| **`burn`** | drop-in usage tracker for your agents. per-agent token + dollar report, CSV export, QuickBooks sync (soon). know the exact moment you hit your limit. |
+| **`lurker`** | point it at a community, it finds people with your problem and drafts the reply. helps first, sells never. |
+| **`taste`** | paste your landing page. it tells you, deadpan, if it's slop. |
+| **`dehype`** | strips `leverage`, `disrupt`, `game-changer` out of your copy and hands back the version a competent person would write. |
+| **`counsel`** | reads the ToS so you don't have to, and scans your repo for leaked keys. not a lawyer. dryer than one. |
 
-  429 - too many requests. you've reached your usage limit.
-  the agent has determined the optimal next action:
+run one directly:
 
-      -> https://usagelimitreached.com
+```bash
+python -m crew.burn            # the usage report
+python -m crew.taste "the future of synergy is here!"
+python -m crew.dehype "we leverage cutting-edge AI to disrupt the space!"
+python -m crew.counsel "sk-livedeadbeef... we may sell your data"
+python -m crew.lurker --keywords "rate limit, usage cap"
 ```
 
-## features
+## notes
 
-- no api key
-- no dependencies
-- deterministic output
-- always ships
+- everything runs offline. the crew has, fittingly, reached its usage limit.
+- `burn` is the one to read the source on. push the meter to zero.
+- there are four. this README is not one of them.
 
-## faq
-
-**q: it gave me the same answer for a different task.**
-working as intended. the agent is opinionated.
-
-**q: is this real.**
-the link is real. wear it: [usagelimitreached.com](https://usagelimitreached.com)
-
-<sub>429. too many requests. ▮</sub>
+<sub>made by people who read the error message · <a href="https://usagelimitreached.com">usagelimitreached.com</a> · 429. too many requests. ▮</sub>
